@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Tareas</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Lista de Tareas</h1>
+
+        <nav class="nav nav-pills flex-column flex-sm-row">
+            <a class="flex-sm-fill text-sm-center nav-link active" href="#">Tareas</a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="./Potada.html">Portada</a>
+        </nav>
+
+        <form id="task-form" class="my-4 p-4 rounded shadow">
+            <div class="form-group">
+                <label for="task-name">Nombre de la tarea</label>
+                <input type="text" id="task-name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="start-date">Fecha de inicio</label>
+                <input type="date" id="start-date" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="end-date">Fecha de fin</label>
+                <input type="date" id="end-date" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="responsible">Responsable</label>
+                <input type="text" id="responsible" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Agregar Tarea</button>
+        </form>
+
+        <div class="form-group">
+            <label for="search-term">Buscar Tarea</label>
+            <input type="text" id="search-term" class="form-control" placeholder="Buscar por nombre...">
+        </div>
+        <ul id="task-list" class="list-group mt-3"></ul>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
